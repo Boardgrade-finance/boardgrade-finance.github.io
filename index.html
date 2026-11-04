@@ -83,6 +83,14 @@ section.alt { background: var(--alt); }
 .role p { margin: 0; color: var(--ink-2); }
 .path { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
 
+/* Finance in practice */
+.shots { display: grid; gap: 40px; }
+.shots figure { margin: 0; display: grid; gap: 12px; }
+.shots img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 6px 24px rgba(15,23,34,.08); }
+.shots figcaption { color: var(--ink-2); font-size: 15.5px; max-width: 75ch; }
+.shots figcaption b { color: var(--ink); }
+.note { margin: 24px 0 0; font-size: 13.5px; color: var(--muted); }
+
 /* Credentials */
 .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
 .creds h3 { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 12px; }
@@ -112,7 +120,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 <div class="top"><div class="wrap">
   <a class="mark" href="#">Kostas Avramiotis</a>
   <nav aria-label="Sections">
-    <a href="#record">Track record</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    <a href="#practice">In practice</a><a href="#record">Track record</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
   </nav>
 </div></div>
 
@@ -137,7 +145,23 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </dl>
 </div></header>
 
-<section id="record" class="alt"><div class="wrap">
+<section id="practice" class="alt"><div class="wrap">
+  <div class="head">
+    <div><div class="kicker">Finance in practice</div><h2>Growth, profit, cash</h2></div>
+    <p>Three pages from a Power BI reporting pack I designed, shown here on fictional data for an illustrative €25M ARR SaaS business.</p>
+  </div>
+  <div class="shots">
+    <figure><a href="img/01_arr_growth.png" target="_blank" rel="noopener"><img src="img/01_arr_growth.png" alt="ARR growth bridge: opening ARR, new logos, expansion, contraction, churn, closing ARR" loading="lazy"></a>
+      <figcaption><b>1. Growth quality.</b> An ARR bridge showing where growth came from: new logos versus expansion, net of churn, with NRR and GRR.</figcaption></figure>
+    <figure><a href="img/02_profit_bridge.png" target="_blank" rel="noopener"><img src="img/02_profit_bridge.png" alt="Net profit bridge versus three-month average and P&amp;L waterfall" loading="lazy"></a>
+      <figcaption><b>2. Why profit moved.</b> A monthly net-profit bridge against the 3-month average, isolating the driver behind each swing.</figcaption></figure>
+    <figure><a href="img/03_cash_forecast.png" target="_blank" rel="noopener"><img src="img/03_cash_forecast.png" alt="13-week cash flow forecast with liquidity headroom and scenarios" loading="lazy"></a>
+      <figcaption><b>3. Cash headroom.</b> A 13-week cash forecast with base, downside and upside scenarios and liquidity against a minimum threshold.</figcaption></figure>
+  </div>
+  <p class="note">Illustrative data only. Click an image to view it full size.</p>
+</div></section>
+
+<section id="record"><div class="wrap">
   <div class="head">
     <div><div class="kicker">Track record</div><h2>Selected results</h2></div>
     <p>Outcomes from finance leadership roles in software and industrial businesses.</p>
@@ -150,7 +174,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 </div></section>
 
-<section id="approach"><div class="wrap">
+<section id="approach" class="alt"><div class="wrap">
   <div class="head">
     <div><div class="kicker">Approach</div><h2>How I lead finance</h2></div>
     <p>Finance as a partner to the CEO and board: commercially engaged, disciplined on capital, and precise on the numbers.</p>
@@ -162,7 +186,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 </div></section>
 
-<section id="experience" class="alt"><div class="wrap">
+<section id="experience"><div class="wrap">
   <div class="head">
     <div><div class="kicker">Experience</div><h2>Career</h2></div>
     <p>Finance leadership roles across Germany, the Netherlands and the Middle East.</p>
@@ -209,7 +233,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 </div></section>
 
-<section><div class="wrap">
+<section class="alt"><div class="wrap">
   <div class="head">
     <div><div class="kicker">Background</div><h2>Credentials</h2></div>
     <p>Formal training in finance and management accounting, with experience across five countries.</p>
@@ -232,7 +256,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 </div></section>
 
-<section id="contact" class="contact alt"><div class="wrap">
+<section id="contact" class="contact"><div class="wrap">
   <div><div class="kicker">Contact</div><h2>Get in touch</h2></div>
   <div>
     <p>I welcome conversations with boards, investors and search partners. The best way to reach me is through LinkedIn.</p>
