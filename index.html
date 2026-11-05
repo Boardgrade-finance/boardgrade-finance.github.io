@@ -91,6 +91,21 @@ section.alt { background: var(--alt); }
 .shots figcaption b { color: var(--ink); }
 .note { margin: 24px 0 0; font-size: 13.5px; color: var(--muted); }
 
+/* Finance in practice: stories */
+.story { display: grid; gap: 24px; padding-block: 40px; border-top: 1px solid var(--rule); }
+.story-text { display: grid; grid-template-columns: 1fr 1.2fr; column-gap: 56px; }
+.story-text > :not(dl) { grid-column: 1; }
+.story dl { grid-column: 2; grid-row: 1 / span 3; align-self: end; }
+.story:first-of-type { border-top: 0; padding-top: 8px; }
+.story-no { font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.story h3 { font-family: var(--serif); font-weight: 600; font-size: 26px; line-height: 1.2; margin: 8px 0 12px; color: var(--navy); }
+.takeaway { font-size: 17px; font-weight: 500; color: var(--ink); margin: 0 0 16px; }
+.story dl { margin: 0; display: grid; gap: 12px; }
+.story dt { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.story dd { margin: 2px 0 0; color: var(--ink-2); font-size: 15.5px; }
+.story-img img { width: 100%; height: auto; display: block; background: #fff; border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 8px 28px rgba(15,23,34,.08); }
+@media (max-width: 860px) { .story-text { grid-template-columns: 1fr; } .story dl { grid-column: 1; grid-row: auto; margin-top: 8px; } }
+
 /* Credentials */
 .creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
 .creds h3 { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 12px; }
@@ -147,18 +162,50 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 
 <section id="practice" class="alt"><div class="wrap">
   <div class="head">
-    <div><div class="kicker">Finance in practice</div><h2>Growth, profit, cash</h2></div>
-    <p>Three pages from a Power BI reporting pack I designed, shown here on fictional data for an illustrative €25M ARR SaaS business.</p>
+    <div><div class="kicker">Finance in practice</div><h2>Three questions a board asks</h2></div>
+    <p>How I use reporting to answer them, shown with my own Power BI work on fictional data for an illustrative €25M ARR SaaS business.</p>
   </div>
-  <div class="shots">
-    <figure><a href="img/01_arr_growth.png?v=2" target="_blank" rel="noopener"><img src="img/01_arr_growth.png?v=2" alt="ARR growth bridge: opening ARR, new logos, expansion, contraction, churn, closing ARR" loading="lazy"></a>
-      <figcaption><b>1. Growth quality.</b> An ARR bridge showing where growth came from: new logos versus expansion, net of churn, with NRR and GRR.</figcaption></figure>
-    <figure><a href="img/02_profit_bridge.png?v=2" target="_blank" rel="noopener"><img src="img/02_profit_bridge.png?v=2" alt="Net profit bridge versus three-month average and P&amp;L waterfall" loading="lazy"></a>
-      <figcaption><b>2. Why profit moved.</b> A monthly net-profit bridge against the 3-month average, isolating the driver behind each swing.</figcaption></figure>
-    <figure><a href="img/03_cash_forecast.png?v=2" target="_blank" rel="noopener"><img src="img/03_cash_forecast.png?v=2" alt="13-week cash flow forecast with liquidity headroom and scenarios" loading="lazy"></a>
-      <figcaption><b>3. Cash headroom.</b> A 13-week cash forecast with base, downside and upside scenarios and liquidity against a minimum threshold.</figcaption></figure>
-  </div>
-  <p class="note">Illustrative data only. Click an image to view it full size.</p>
+
+  <article class="story">
+    <div class="story-text">
+      <div class="story-no">01 · Growth</div>
+      <h3>Is our growth durable?</h3>
+      <p class="takeaway">ARR grew 30% to €25M, and 62% of new ARR came from existing customers expanding.</p>
+      <dl>
+        <div><dt>What it showed</dt><dd>Net revenue retention of 116% and gross retention of 94%, on a customer base that grew by only five logos.</dd></div>
+        <div><dt>So what</dt><dd>Growth is driven by value per customer. That points investment toward customer success and expansion pricing, with NRR tracked as a board KPI.</dd></div>
+      </dl>
+    </div>
+    <a class="story-img" href="img/story_1_growth.png?v=3" target="_blank" rel="noopener"><img src="img/story_1_growth.png?v=3" alt="ARR bridge from €19.2M to €25.0M: new logos, expansion, contraction and churn, with growth-quality metrics" loading="lazy"></a>
+  </article>
+
+  <article class="story">
+    <div class="story-text">
+      <div class="story-no">02 · Profit</div>
+      <h3>Why did profit dip this month?</h3>
+      <p class="takeaway">Net profit fell €53K below the 3-month average, despite revenue rising €67K.</p>
+      <dl>
+        <div><dt>What it showed</dt><dd>One driver explains most of the gap: an autumn sales and marketing campaign added €72K of cost.</dd></div>
+        <div><dt>So what</dt><dd>The dip was a deliberate investment, not a margin problem. The right response is a campaign return checkpoint before further Q4 spend.</dd></div>
+      </dl>
+    </div>
+    <a class="story-img" href="img/story_2_profit.png?v=3" target="_blank" rel="noopener"><img src="img/story_2_profit.png?v=3" alt="Net profit bridge from the 3-month average of €202K to €149K, by driver" loading="lazy"></a>
+  </article>
+
+  <article class="story">
+    <div class="story-text">
+      <div class="story-no">03 · Cash</div>
+      <h3>Can we fund the next quarter?</h3>
+      <p class="takeaway">Cash stays above €8.6M in every week of the 13-week forecast, more than double the €4M minimum.</p>
+      <dl>
+        <div><dt>What it showed</dt><dd>The low point comes in a payroll week before Christmas. Even in the downside case (late collections, unexpected spend), cash never falls below €7.4M.</dd></div>
+        <div><dt>So what</dt><dd>Planned hiring can proceed and the credit facility can stay undrawn, with weekly tracking against forecast.</dd></div>
+      </dl>
+    </div>
+    <a class="story-img" href="img/story_3_cash.png?v=3" target="_blank" rel="noopener"><img src="img/story_3_cash.png?v=3" alt="13-week cash forecast: weekly closing cash against the minimum threshold, with key cash metrics" loading="lazy"></a>
+  </article>
+
+  <p class="note">Illustrative data only. Click a chart to view it full size.</p>
 </div></section>
 
 <section id="record"><div class="wrap">
