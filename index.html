@@ -16,10 +16,11 @@
 <title>Kostas Avramiotis · Finance Leadership</title>
 <meta name="description" content="Finance leader: FP&A, pricing, controls and capital allocation across SaaS and industrial businesses.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23152B47'/%3E%3Ctext x='16' y='21.5' font-family='Georgia,serif' font-size='14' fill='%23fff' text-anchor='middle'%3EKA%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="preload" href="fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight: 400 600; font-display: swap; src: url(fonts/source-serif-4-latin.woff2) format("woff2"); }
+@font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400 600; font-display: swap; src: url(fonts/public-sans-latin.woff2) format("woff2"); }
 :root {
   --bg: #ffffff; --alt: #f6f7f9; --ink: #0f1722; --ink-2: #3f4a59; --muted: #7b8594;
   --rule: #e2e5ea; --navy: #152b47; --accent: #2c5282;
@@ -42,19 +43,23 @@ nav a { color: var(--ink-2); text-decoration: none; font-size: 14px; font-weight
 nav a:hover { color: var(--accent); }
 
 /* Hero */
-.hero .wrap { display: grid; grid-template-columns: 1.55fr 1fr; gap: 56px; padding-block: 76px 64px; align-items: start; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; padding-block: 64px 60px; align-items: start; }
 .kicker { font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(38px, 5.4vw, 58px); line-height: 1.04; letter-spacing: -.015em; margin: 14px 0 22px; color: var(--navy); }
 .statement { font-family: var(--serif); font-size: clamp(21px, 2.4vw, 25px); line-height: 1.4; margin: 0 0 20px; color: var(--ink); max-width: 30ch; }
 .intro { color: var(--ink-2); margin: 0; max-width: 60ch; }
-.facts { border-top: 2px solid var(--navy); padding-top: 6px; margin: 0; }
-.facts div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding-block: 12px; border-bottom: 1px solid var(--rule); font-size: 15px; }
-.facts dt { color: var(--muted); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; padding-top: 2px; }
-.facts dd { margin: 0; color: var(--ink); }
-.cta { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
+.cta { margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
 .btn { display: inline-block; padding: 11px 18px; font-size: 14.5px; font-weight: 600; text-decoration: none; border-radius: 3px; }
 .btn.solid { background: var(--navy); color: var(--bg); }
-.btn.line { border: 1px solid var(--rule); color: var(--ink); }
+
+/* Results panel */
+.results { border-top: 2px solid var(--navy); padding-top: 12px; }
+.figures { display: grid; grid-template-columns: 1fr 1fr; margin-top: 4px; }
+.fig { padding: 16px 20px 18px 0; display: grid; gap: 5px; align-content: start; border-bottom: 1px solid var(--rule); }
+.fig:nth-child(even) { padding-left: 20px; padding-right: 0; border-left: 1px solid var(--rule); }
+.fig small { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.fig b { font-family: var(--serif); font-weight: 600; font-size: 31px; line-height: 1.1; color: var(--navy); font-variant-numeric: lining-nums; }
+.fig span { font-size: 14px; line-height: 1.5; color: var(--ink-2); }
 
 /* Sections */
 section { padding-block: 64px; }
@@ -62,19 +67,6 @@ section.alt { background: var(--alt); }
 .head { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; margin-bottom: 34px; align-items: end; }
 .head h2 { font-family: var(--serif); font-weight: 600; font-size: 30px; line-height: 1.15; margin: 8px 0 0; color: var(--navy); }
 .head p { margin: 0; color: var(--ink-2); max-width: 58ch; }
-
-/* Track record */
-.figures { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.fig { padding: 26px 22px 24px 0; display: grid; gap: 8px; align-content: start; }
-.fig + .fig { padding-left: 22px; border-left: 1px solid var(--rule); }
-.fig b { font-family: var(--serif); font-weight: 600; font-size: 34px; line-height: 1.05; color: var(--navy); font-variant-numeric: lining-nums; }
-.fig span { font-size: 14.5px; color: var(--ink-2); }
-
-/* Approach */
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
-.pillar { border-top: 2px solid var(--navy); padding-top: 18px; }
-.pillar h3 { font-family: var(--serif); font-weight: 600; font-size: 21px; margin: 0 0 10px; }
-.pillar p { margin: 0; color: var(--ink-2); font-size: 15.5px; }
 
 /* Experience */
 .role { display: grid; grid-template-columns: 1fr 2fr; gap: 8px 56px; padding-block: 28px; border-top: 1px solid var(--rule); }
@@ -89,11 +81,6 @@ section.alt { background: var(--alt); }
 .path { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
 
 /* Finance in practice */
-.shots { display: grid; gap: 40px; }
-.shots figure { margin: 0; display: grid; gap: 12px; }
-.shots img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 6px 24px rgba(15,23,34,.08); }
-.shots figcaption { color: var(--ink-2); font-size: 15.5px; max-width: 75ch; }
-.shots figcaption b { color: var(--ink); }
 .note { margin: 24px 0 0; font-size: 13.5px; color: var(--muted); }
 
 /* Finance in practice: stories */
@@ -126,10 +113,10 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 
 @media (max-width: 860px) {
   .hero .wrap, .head, .role, .contact .wrap { grid-template-columns: 1fr; gap: 28px; }
-  .figures { grid-template-columns: 1fr 1fr; }
-  .fig:nth-child(3) { padding-left: 0; border-left: 0; }
-  .fig:nth-child(n+3) { border-top: 1px solid var(--rule); }
-  .pillars, .creds { grid-template-columns: 1fr; gap: 28px; }
+  .fig { padding-right: 14px; }
+  .fig:nth-child(even) { padding-left: 14px; }
+  .fig b { font-size: 24px; white-space: nowrap; }
+  .creds { grid-template-columns: 1fr; gap: 28px; }
   .role { gap: 12px; }
   nav { display: none; }
 }
@@ -140,29 +127,29 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 <div class="top"><div class="wrap">
   <a class="mark" href="#">Kostas Avramiotis</a>
   <nav aria-label="Sections">
-    <a href="#practice">In practice</a><a href="#record">Track record</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    <a href="#practice">In practice</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
   </nav>
 </div></div>
 
 <header class="hero"><div class="wrap">
   <div>
-    <div class="kicker">Finance leadership</div>
+    <div class="kicker">Head of Finance &amp; Revenue</div>
     <h1>Kostas Avramiotis</h1>
     <p class="statement">Making growth pay for itself.</p>
-    <p class="intro">Finance leader with ~15 years across FP&amp;A, controllership, audit, tax and commercial finance, from a B2B SaaS business to a ~€700M global industrial group. Trusted partner to CEOs and boards on capital allocation, pricing and cost structure.</p>
+    <p class="intro">I run finance and revenue as one function at Countly, a global B2B SaaS business, reporting to the CEO. Before that, I was Group Business Controller at Hyva, a ~€700M industrial group active in 100+ countries. CMA and MSc Finance, with ~15 years across FP&amp;A, audit, tax and commercial finance.</p>
     <div class="cta">
-      <a class="btn solid" href="#contact">Contact</a>
-      <a class="btn line" href="https://www.linkedin.com/in/kostasavramiotis" rel="noopener">LinkedIn</a>
+      <a class="btn solid" href="https://www.linkedin.com/in/kostasavramiotis" rel="noopener">Connect on LinkedIn</a>
     </div>
   </div>
-  <dl class="facts">
-    <div><dt>Current</dt><dd>Head of Finance &amp; Revenue, Countly</dd></div>
-    <div><dt>Reports to</dt><dd>CEO</dd></div>
-    <div><dt>Sectors</dt><dd>B2B SaaS · Industrial · Pharma</dd></div>
-    <div><dt>Scope</dt><dd>P&amp;L, FP&amp;A, pricing, controls, treasury</dd></div>
-    <div><dt>Credentials</dt><dd>CMA · MSc Finance</dd></div>
-    <div><dt>Based in</dt><dd>Cologne, Germany</dd></div>
-  </dl>
+  <div class="results">
+    <div class="kicker">Selected results</div>
+    <div class="figures">
+      <div class="fig"><small>Countly</small><b>+7 pts</b><span>Gross margin, through hosting optimisation, repricing and discount governance</span></div>
+      <div class="fig"><small>Countly</small><b>7 → 3 days</b><span>Month-end close, with forecasts within 5% of actuals</span></div>
+      <div class="fig"><small>Hyva</small><b>€180M</b><span>Group refinancing, co-led with the Group Treasurer</span></div>
+      <div class="fig"><small>PPG</small><b>$250M</b><span>New plant decision: financial model and investment case</span></div>
+    </div>
+  </div>
 </div></header>
 
 <section id="practice" class="alt"><div class="wrap">
@@ -181,7 +168,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
         <div><dt>So what</dt><dd>Growth is driven by value per customer. That points investment toward customer success and expansion pricing, with NRR tracked as a board KPI.</dd></div>
       </dl>
     </div>
-    <a class="story-img" href="img/exhibit_1_growth.png?v=5" target="_blank" rel="noopener"><img src="img/exhibit_1_growth.png?v=5" alt="ARR bridge from €19.2M to €25.0M: new logos, expansion, contraction and churn, with growth-quality metrics" loading="lazy"></a>
+    <a class="story-img" href="img/exhibit_1_growth.png?v=6" target="_blank" rel="noopener"><picture><source media="(max-width: 600px)" srcset="img/exhibit_1_growth_phone.png?v=6"><img src="img/exhibit_1_growth.png?v=6" alt="ARR bridge from €19.2M to €25.0M: new logos, expansion, contraction and churn" loading="lazy"></picture></a>
   </article>
 
   <article class="story">
@@ -190,11 +177,11 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
       <h3>Why did profit dip this month?</h3>
       <p class="takeaway">Net profit fell €53K below the 3-month average, despite revenue rising €67K.</p>
       <dl>
-        <div><dt>What it showed</dt><dd>One driver explains most of the gap: an autumn sales and marketing campaign added €72K of cost.</dd></div>
+        <div><dt>What it showed</dt><dd>An autumn sales and marketing campaign added €72K of cost. Without it, profit would have been about €19K above trend.</dd></div>
         <div><dt>So what</dt><dd>The dip was a deliberate investment, not a margin problem. The right response is a campaign return checkpoint before further Q4 spend.</dd></div>
       </dl>
     </div>
-    <a class="story-img" href="img/exhibit_2_profit.png?v=5" target="_blank" rel="noopener"><img src="img/exhibit_2_profit.png?v=5" alt="Net profit bridge from the 3-month average of €202K to €149K, by driver" loading="lazy"></a>
+    <a class="story-img" href="img/exhibit_2_profit.png?v=6" target="_blank" rel="noopener"><picture><source media="(max-width: 600px)" srcset="img/exhibit_2_profit_phone.png?v=6"><img src="img/exhibit_2_profit.png?v=6" alt="Net profit bridge from the 3-month average of €202K to €149K, by driver" loading="lazy"></picture></a>
   </article>
 
   <article class="story">
@@ -207,41 +194,16 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
         <div><dt>So what</dt><dd>Planned hiring can proceed and the credit facility can stay undrawn, with weekly tracking against forecast.</dd></div>
       </dl>
     </div>
-    <a class="story-img" href="img/exhibit_3_cash.png?v=5" target="_blank" rel="noopener"><img src="img/exhibit_3_cash.png?v=5" alt="13-week cash forecast: weekly closing cash against the minimum threshold, with key cash metrics" loading="lazy"></a>
+    <a class="story-img" href="img/exhibit_3_cash.png?v=6" target="_blank" rel="noopener"><picture><source media="(max-width: 600px)" srcset="img/exhibit_3_cash_phone.png?v=6"><img src="img/exhibit_3_cash.png?v=6" alt="13-week cash forecast: weekly closing cash and total liquidity against the €4M minimum" loading="lazy"></picture></a>
   </article>
 
   <p class="note">Source: Power BI model built by the author, using illustrative data. Click an exhibit to view it full size.</p>
 </div></section>
 
-<section id="record"><div class="wrap">
-  <div class="head">
-    <div><div class="kicker">Track record</div><h2>Selected results</h2></div>
-    <p>Outcomes from finance leadership roles in software and industrial businesses.</p>
-  </div>
-  <div class="figures">
-    <div class="fig"><b>+7 pts</b><span>Gross margin expansion through hosting optimisation, repricing and discount governance</span></div>
-    <div class="fig"><b>7 → 3 days</b><span>Month-end close, with forecasts within 5% of actuals</span></div>
-    <div class="fig"><b>€180M</b><span>Group refinancing, co-led with the Group Treasurer</span></div>
-    <div class="fig"><b>$250M</b><span>Plant investment case: model and decision support</span></div>
-  </div>
-</div></section>
-
-<section id="approach" class="alt"><div class="wrap">
-  <div class="head">
-    <div><div class="kicker">Approach</div><h2>How I lead finance</h2></div>
-    <p>Finance as a partner to the CEO and board: commercially engaged, disciplined on capital, and precise on the numbers.</p>
-  </div>
-  <div class="pillars">
-    <div class="pillar"><h3>Growth with margin</h3><p>Pricing, deal desk and unit economics that let revenue grow without diluting profitability.</p></div>
-    <div class="pillar"><h3>Capital discipline</h3><p>Liquidity, treasury and investment cases held to clear returns, from SaaS cash planning to group refinancing.</p></div>
-    <div class="pillar"><h3>Board-grade reporting</h3><p>A fast close, reliable forecasts and strong controls, so boards and investors can decide with confidence.</p></div>
-  </div>
-</div></section>
-
 <section id="experience"><div class="wrap">
   <div class="head">
     <div><div class="kicker">Experience</div><h2>Career</h2></div>
-    <p>Finance leadership roles across Germany, the Netherlands and the Middle East.</p>
+    <p>Finance roles across Germany, the Netherlands and the Middle East, in software, industrial and pharma businesses.</p>
   </div>
 
   <div class="role">
@@ -309,10 +271,10 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 </div></section>
 
-<section class="alt"><div class="wrap">
+<section id="credentials" class="alt"><div class="wrap">
   <div class="head">
     <div><div class="kicker">Background</div><h2>Credentials</h2></div>
-    <p>Formal training in finance and management accounting, with experience across five countries.</p>
+    <p>Formal training in finance and management accounting.</p>
   </div>
   <div class="creds">
     <div><h3>Education</h3><ul>
@@ -336,11 +298,11 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 <section id="contact" class="contact"><div class="wrap">
   <div><div class="kicker">Contact</div><h2>Get in touch</h2></div>
   <div>
-    <p>I welcome conversations with boards, investors and search partners. The best way to reach me is through LinkedIn.</p>
+    <p>I'm always glad to connect with finance leaders and investors. The best way to reach me is through LinkedIn.</p>
     <a class="btn solid" href="https://www.linkedin.com/in/kostasavramiotis" rel="noopener">Message me on LinkedIn</a>
   </div>
 </div></section>
 
-<footer><div class="wrap"><span>© Kostas Avramiotis</span><span>Cologne, Germany</span></div></footer>
+<footer><div class="wrap"><span>© Kostas Avramiotis</span></div></footer>
 </body>
 </html>
