@@ -117,10 +117,36 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   .fig:nth-child(even) { padding-left: 14px; }
   .fig b { font-size: 24px; white-space: nowrap; }
   .creds { grid-template-columns: 1fr; gap: 28px; }
+  .creds.skills { margin-top: 28px; }
   .role { gap: 12px; }
   nav { display: none; }
 }
+.creds.skills { margin-top: 44px; }
+.role .loc { font-size: 14px; color: var(--muted); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kostas Avramiotis",
+  "jobTitle": "Head of Finance & Revenue",
+  "description": "Most senior finance executive at Countly, a global B2B SaaS business, running finance and revenue as one function and reporting to the CEO.",
+  "url": "https://boardgrade-finance.github.io/",
+  "sameAs": ["https://www.linkedin.com/in/kostasavramiotis"],
+  "worksFor": { "@type": "Organization", "name": "Countly" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Tilburg University" },
+    { "@type": "CollegeOrUniversity", "name": "Athens University of Economics and Business" }
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "MSc Finance" },
+    { "@type": "EducationalOccupationalCredential", "name": "Certified Management Accountant (CMA)" },
+    { "@type": "EducationalOccupationalCredential", "name": "PRINCE2" }
+  ],
+  "knowsLanguage": ["Greek", "English", "German"],
+  "knowsAbout": ["FP&A", "Budgeting and rolling forecasts", "Board reporting", "Pricing and deal desk", "Internal controls", "Revenue recognition (UK GAAP)", "IFRS audit", "Treasury and refinancing", "Transfer pricing", "ARR", "Gross margin", "Unit economics", "Net revenue retention", "Power BI", "SAP", "Microsoft Dynamics Business Central", "Excel financial modelling"]
+}
+</script>
 </head>
 <body>
 
@@ -136,7 +162,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
     <div class="kicker">Head of Finance &amp; Revenue</div>
     <h1>Kostas Avramiotis</h1>
     <p class="statement">Making growth pay for itself.</p>
-    <p class="intro">I run finance and revenue as one function at Countly, a global B2B SaaS business, reporting to the CEO. Before that, I was Group Business Controller at Hyva, a ~€700M industrial group active in 100+ countries. CMA and MSc Finance, with ~15 years across FP&amp;A, audit, tax and commercial finance.</p>
+    <p class="intro">As Countly's most senior finance executive, I run finance and revenue as one function, reporting to the CEO. Before that, I was Group Business Controller at Hyva, a ~€700M industrial group active in 100+ countries. CMA and MSc Finance, with ~15 years across FP&amp;A, audit, tax and commercial finance.</p>
     <div class="cta">
       <a class="btn solid" href="https://www.linkedin.com/in/kostasavramiotis" rel="noopener">Connect on LinkedIn</a>
     </div>
@@ -160,7 +186,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 
   <article class="story">
     <div class="story-text">
-      <div class="story-no">01 · Growth</div>
+      <div class="story-no">01 · Growth · Illustrative data</div>
       <h3>Is our growth durable?</h3>
       <p class="takeaway">ARR grew 30% to €25M, and 62% of new ARR came from existing customers expanding.</p>
       <dl>
@@ -173,7 +199,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 
   <article class="story">
     <div class="story-text">
-      <div class="story-no">02 · Profit</div>
+      <div class="story-no">02 · Profit · Illustrative data</div>
       <h3>Why did profit dip this month?</h3>
       <p class="takeaway">Net profit fell €53K from August to September, despite revenue rising €67K.</p>
       <dl>
@@ -186,7 +212,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 
   <article class="story">
     <div class="story-text">
-      <div class="story-no">03 · Cash</div>
+      <div class="story-no">03 · Cash · Illustrative data</div>
       <h3>Can we fund the next quarter?</h3>
       <p class="takeaway">Cash stays above €8.6M in every week of the 13-week forecast, more than double the €4M minimum.</p>
       <dl>
@@ -203,11 +229,11 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
 <section id="experience"><div class="wrap">
   <div class="head">
     <div><div class="kicker">Experience</div><h2>Career</h2></div>
-    <p>Finance roles across Germany, the Netherlands and the Middle East, in software, industrial and pharma businesses.</p>
+    <p>Six years leading finance at a B2B SaaS company, built on controlling, tax and analyst roles in global industrial and pharma groups, across Germany, the Netherlands and the Middle East.</p>
   </div>
 
   <div class="role">
-    <div class="meta"><span class="co">Countly</span><span class="dates">Aug 2020 – Present · Cologne</span></div>
+    <div class="meta"><span class="co">Countly</span><span class="dates"><time datetime="2020">2020</time> – Present</span><span class="loc">Cologne, Germany</span></div>
     <div>
       <h3>Head of Finance &amp; Revenue</h3>
       <p class="ctx">Global B2B product analytics SaaS</p>
@@ -221,7 +247,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 
   <div class="role">
-    <div class="meta"><span class="co">Agodco Group</span><span class="dates">Jan 2020 – Aug 2020 · Bahrain</span></div>
+    <div class="meta"><span class="co">Agodco Group</span><span class="dates"><time datetime="2020">2020</time></span><span class="loc">Bahrain</span></div>
     <div>
       <h3>Head of Finance</h3>
       <p class="ctx">Oil &amp; gas pipeline solutions</p>
@@ -230,7 +256,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 
   <div class="role">
-    <div class="meta"><span class="co">Hyva Group</span><span class="dates">Apr 2017 – Dec 2019 · Amsterdam</span></div>
+    <div class="meta"><span class="co">Hyva Group</span><span class="dates"><time datetime="2017">2017</time> – <time datetime="2019">2019</time></span><span class="loc">Amsterdam, Netherlands</span></div>
     <div>
       <h3>Group Business Controller</h3>
       <p class="ctx">~€700M revenue · 15 manufacturing entities · 25 subsidiaries · 100+ countries</p>
@@ -239,7 +265,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 
   <div class="role">
-    <div class="meta"><span class="co">Merck &amp; Co.</span><span class="dates">Mar 2015 – Mar 2017 · Netherlands</span></div>
+    <div class="meta"><span class="co">Merck &amp; Co.</span><span class="dates"><time datetime="2015">2015</time> – <time datetime="2017">2017</time></span><span class="loc">Netherlands</span></div>
     <div>
       <h3>Senior Financial Analyst, Transfer Pricing</h3>
       <p class="ctx">Global pharmaceutical group</p>
@@ -251,7 +277,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 
   <div class="role">
-    <div class="meta"><span class="co">PPG Industries</span><span class="dates">2013 – 2015 · Netherlands</span></div>
+    <div class="meta"><span class="co">PPG Industries</span><span class="dates"><time datetime="2013">2013</time> – <time datetime="2015">2015</time></span><span class="loc">Netherlands</span></div>
     <div>
       <h3>Business Analyst, Protective &amp; Marine Coatings</h3>
       <p class="ctx">Global coatings manufacturer</p>
@@ -263,7 +289,7 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
   </div>
 
   <div class="role">
-    <div class="meta"><span class="co">Philips Healthcare</span><span class="dates">2012 – 2013 · Netherlands</span></div>
+    <div class="meta"><span class="co">Philips Healthcare</span><span class="dates"><time datetime="2012">2012</time> – <time datetime="2013">2013</time></span><span class="loc">Netherlands</span></div>
     <div>
       <h3>Pricing &amp; Margin Analyst (internship), Refurbished Systems</h3>
       <p>Built gross-margin monitoring models reporting directly to the General Manager and Finance Director.</p>
@@ -291,6 +317,30 @@ footer .wrap { border-top: 1px solid var(--rule); padding-block: 22px; font-size
       <li>Greek<small>Native</small></li>
       <li>English<small>Fluent</small></li>
       <li>German<small>Intermediate</small></li>
+    </ul></div>
+  </div>
+  <div class="creds skills">
+    <div><h3>Finance skills</h3><ul>
+      <li>FP&amp;A, budgeting and rolling forecasts</li>
+      <li>Board reporting</li>
+      <li>Pricing and deal desk</li>
+      <li>Internal controls</li>
+      <li>Revenue recognition (UK GAAP)</li>
+      <li>IFRS audit</li>
+      <li>Treasury and refinancing</li>
+      <li>Transfer pricing</li>
+    </ul></div>
+    <div><h3>SaaS metrics</h3><ul>
+      <li>ARR</li>
+      <li>Gross margin</li>
+      <li>Unit economics</li>
+      <li>Net revenue retention</li>
+    </ul></div>
+    <div><h3>Systems</h3><ul>
+      <li>Power BI</li>
+      <li>SAP (R/3, BW)</li>
+      <li>Microsoft Dynamics Business Central</li>
+      <li>Advanced Excel modelling</li>
     </ul></div>
   </div>
 </div></section>
